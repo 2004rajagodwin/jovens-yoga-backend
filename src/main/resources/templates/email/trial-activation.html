@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body style="margin:0;padding:0;background:#fff9f0;font-family:Arial,Helvetica,sans-serif;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#fff9f0;padding:32px 0;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="560" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;overflow:hidden;border:1px solid #eeeeee;">
+          <tr>
+            <td style="background:#ff6b1b;padding:28px 32px;">
+              <h1 style="margin:0;color:#ffffff;font-size:22px;">Jovens Yoga</h1>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:32px;">
+              <p style="font-size:16px;color:#111111;margin:0 0 16px;">Hi {{customerName}},</p>
+              <p style="font-size:16px;color:#333333;line-height:1.6;margin:0 0 16px;">
+                Your <strong>{{planName}}</strong> is now active. You have full access for the next
+                <strong>{{durationDays}} days</strong> — no payment required.
+              </p>
+
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FFF5EE;border-radius:10px;margin:20px 0;">
+                <tr>
+                  <td style="padding:16px 20px;font-size:14px;color:#DE6117;">
+                    Trial start: <strong>{{trialStartDate}}</strong><br />
+                    Trial ends: <strong>{{trialExpiryDate}}</strong>
+                  </td>
+                </tr>
+              </table>
+
+              <p style="font-size:16px;color:#333333;line-height:1.6;margin:0 0 24px;">
+                Explore classes, build your routine, and see what fits your lifestyle. When you're ready for more,
+                Standard and Premium plans are just a click away.
+              </p>
+
+              <table role="presentation" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="border-radius:30px;background:#ff6b1b;">
+                    <a href="{{buyPlanUrl}}" style="display:inline-block;padding:14px 28px;color:#ffffff;text-decoration:none;font-weight:bold;font-size:15px;">
+                      Explore Plans
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:20px 32px;background:#fafafa;border-top:1px solid #eeeeee;">
+              <p style="font-size:12px;color:#999999;margin:0;">Jovens Yoga · This email was sent because you started a free trial.</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
