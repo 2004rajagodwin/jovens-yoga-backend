@@ -41,6 +41,7 @@ public class StripeCheckoutClient {
     public Session createCheckoutSession(CustomerOrder order) {
         SessionCreateParams params = SessionCreateParams.builder()
                 .setMode(SessionCreateParams.Mode.PAYMENT)
+                .addPaymentMethodType(SessionCreateParams.PaymentMethodType.CARD)
                 .setClientReferenceId(order.getOrderNumber())
                 .putMetadata("orderNumber", order.getOrderNumber())
                 .setSuccessUrl(stripeProperties.getSuccessUrl() + "?order=" + order.getOrderNumber() + "&session_id={CHECKOUT_SESSION_ID}")
@@ -84,6 +85,7 @@ public class StripeCheckoutClient {
 
         SessionCreateParams params = SessionCreateParams.builder()
                 .setMode(SessionCreateParams.Mode.SUBSCRIPTION)
+                .addPaymentMethodType(SessionCreateParams.PaymentMethodType.CARD)
                 .setClientReferenceId(String.valueOf(trial.getId()))
                 .putMetadata("trialId", String.valueOf(trial.getId()))
                 .setSuccessUrl(stripeProperties.getSuccessUrl() + "?type=trial&token=" + rawAccessToken + "&session_id={CHECKOUT_SESSION_ID}")
